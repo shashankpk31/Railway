@@ -1,0 +1,20 @@
+{
+  "name": "railway",
+  "version": "1.0.0",
+  "description": "this an api just like a irctc with few limitation to book tickets",
+  "main": "server.mjs",
+  "scripts": {
+    "start": "node server.mjs",
+    "devstart": "nodemon server.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shashankpk31/Railway.git"
+  },
+  "author": "shashankpk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shashankpk31/Railway/issues"
+  },
+  "homepage": "https://github.com/shashankpk31/Railway#readme"
+}
