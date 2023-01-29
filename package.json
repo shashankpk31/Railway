@@ -4,8 +4,7 @@
   "description": "this an api just like a irctc with few limitation to book tickets",
   "main": "server.mjs",
   "scripts": {
-    "start": "node server.js",
-    "devstart": "nodemon server.js"
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
