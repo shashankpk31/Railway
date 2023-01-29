@@ -2,3 +2,5 @@
 *.git
 **/.env
 /DFD's
+/_data
+seeder.js
