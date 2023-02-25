@@ -1,0 +1,47 @@
+[
+  {
+    "_id": "db108b92-84cf-46e8-8d53-fc3f8710cdb3",
+    "colName": "Railway",
+    "created": "2023-02-25T06:04:11.417Z",
+    "sortNum": 10000,
+    "folders": [
+      {
+        "_id": "32f2d192-bef3-427f-830b-5744b7b30ea7",
+        "name": "User Authentication",
+        "containerId": "",
+        "created": "2023-02-25T06:04:11.427Z",
+        "sortNum": 10000
+      },
+      {
+        "_id": "53489e0a-f847-4f50-a081-fa959441e374",
+        "name": "Train",
+        "containerId": "",
+        "created": "2023-02-25T06:04:11.428Z",
+        "sortNum": 20000
+      },
+      {
+        "_id": "59c7f249-c060-412b-a085-8ea8d354b5e5",
+        "name": "Ticket",
+        "containerId": "",
+        "created": "2023-02-25T06:04:11.429Z",
+        "sortNum": 30000
+      },
+      {
+        "_id": "ef6ee5f2-4d5d-4af2-b9cd-2c2eb8cd78e4",
+        "name": "User",
+        "containerId": "",
+        "created": "2023-02-25T06:04:11.430Z",
+        "sortNum": 40000
+      }
+    ],
+    "settings": {
+      "headers": [],
+      "auth": {
+        "type": "bearer",
+        "bearer": "{{Token}}"
+      },
+      "tests": [],
+      "envId": "267a5ae1-bd12-440b-8cba-88bd7bb243f7"
+    }
+  }
+]

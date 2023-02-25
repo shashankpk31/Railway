@@ -65,9 +65,13 @@ const ticketSchema = new Schema({
         type: Number
     },
     Passengers: [passengerSchema],
+    BookedBy:{
+        type:Schema.Types.ObjectId,
+        ref:'user'
+    }
     
 }, { timestamps: true });
 
-const Ticket = mongoose.model('Ticket', ticketSchema);
+const Ticket = mongoose.model('ticket', ticketSchema);
 
 module.exports=Ticket;

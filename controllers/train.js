@@ -4,12 +4,7 @@ const Train = require("../models/train")
 const fs = require("fs")
 
 exports.addTrain = asyncHandler(async (req, res, next) => {
-    const { train_no, train_name, Source_Stn,
-        Destination_Stn, Route, SeatsAvailability } = req.body;
-    const train = await Train.create({
-        train_no, train_name, Source_Stn,
-        Destination_Stn, Route, SeatsAvailability
-    })
+    const train = await Train.create(req.body);
     train.save();
     res.status(200).json({
         success: true,
@@ -18,19 +13,22 @@ exports.addTrain = asyncHandler(async (req, res, next) => {
 })
 
 exports.getTrainByTrainID = asyncHandler(async (req, res, next) => {
-    let train = await Train.find({
-        train_no: req.params.train_id
-    })
-    res.status(200).json({
-        success: true,
-        data: train
+    await Train.findOne({
+        trainno: req.params["train_id"]
+    }, (err, train) => {
+        if (err) {
+            console.log(err);
+        }
+        res.status(200).json({
+            success: true,
+            train
+        })
     })
 })
 
 exports.editTrainByTrainID = asyncHandler(async (req, res, next) => {
-    const { train_name, Source_Stn, Destination_Stn, SeatsAvailability, Route } = req.body;
-    const fieldsToUpdate = { train_name, Source_Stn, Destination_Stn, SeatsAvailability, Route }
-    let train = await Train.findOneAndUpdate({ train_no: req.params.train_id }, fieldsToUpdate, {
+    const fieldsToUpdate = req.body;
+    let train = await Train.findOneAndUpdate({ trainno: req.params["train_id"] }, fieldsToUpdate, {
         new: true,
         runValidators: true
     })
@@ -41,28 +39,51 @@ exports.editTrainByTrainID = asyncHandler(async (req, res, next) => {
 })
 
 exports.deleteTrainByTrainID = asyncHandler(async (req, res, next) => {
-    await Train.findOneAndDelete({ train_no: req.params.train_id });
-    res.status(200).json({
-        success: true,
-        data: {}
-    })
+
+    await Train.findOneAndDelete({ trainno: req.params["train_id"] }, (err, train) => {
+        if (err) {
+            console.log(err);
+        }
+        res.status(200).json({
+            success: true,
+            data: {}
+        })
+    });
+
 })
 
 exports.SearchTrain = asyncHandler(async (req, res, next) => {
-    let trains = await Train.find({
-        "Route.St_Code": { $all: [req.body.srcSt, req.body.dstSt] }
+    let train = await Train.find({
+        "Route.code": { $all: [req.query.Dst, req.query.Src] }
     })
-    let len=trains.length;
-    for (let i = 0; i < len; i++) {
-        const element = trains[i];
-        let indSrc = -1, indDst = -1;
-        indSrc = element.Route.findIndex(e => e.St_Code === req.body.srcSt);
-        indDst = element.Route.findIndex(e => e.St_Code === req.body.dstSt);
-        if (indSrc < indDst && indSrc != -1 && indDst != -1) {
-            trains.push(element);
+    const len = train.length;
+
+    train.forEach(element => {
+        let dstInd = -1, srcInd = -1, rtLen = element.Route.length;
+        element.Route.every(e => {
+            if (element.Route[rtLen - 1].code === req.query.Src) {
+                return false;
+            }
+            if (dstInd !== -1 && srcInd !== -1) {
+                return false;
+            }
+            if (e.code === req.query.Dst) {
+                dstInd = e.no;
+            }
+            if (e.code === req.query.Src) {
+                srcInd = e.no;
+            }
+            if (element.Route[rtLen - 1].code === req.query.Dst) {
+                dstInd = len;
+            }
+            return true;
+        })
+        if (dstInd > srcInd) {
+            train.push(element);
         }
-    }
+    });
+
     res.status(200).json({
-        data: trains.slice(len),
+        data: train.slice(len)
     })
 })

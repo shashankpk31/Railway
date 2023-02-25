@@ -128,6 +128,10 @@ const userSchema = new Schema({
         type: Boolean,
         default: false,
     },
+    BookedTickets:{
+        type:Schema.Types.ObjectId,
+        ref:'ticket'
+    }
 }, { timestamps: true });
 
 //Encrypting password using bcrypt
@@ -203,4 +207,4 @@ userSchema.methods.generateEmailConfirmToken = function (next) {
     return confirmTokenCombined;
 };
 
-module.exports = mongoose.model('User', userSchema);
+module.exports = mongoose.models.user || mongoose.model('user', userSchema);

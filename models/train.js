@@ -2,7 +2,6 @@ const mongoose = require("mongoose")
 
 
 const seatSchema = new mongoose.Schema({
-    status: Boolean,
     charges_per_100km: Number,
     total_coach: Number,
     general_seats: Number,
@@ -21,23 +20,18 @@ const stationSchema = new mongoose.Schema({
     halt: Number,
     day: Number,
     distance: Number,
-    dayofarrival: {
-        type: new Array(7),
-        default: [1, 1, 1, 1, 1, 1, 1]
-    },
+    distanceFromSrc: Number,
+    dayofarrival: Number
 })
 
 const trainSchema = new mongoose.Schema({
-    train_no: {
-        type: Number,
+    trainno: {
+        type: String,
         unique: [true, 'train with same no already exist']
     },
-    type:String,
-    trainName: String,
-    schedule: {
-        type: new Array(7),
-        default: [1, 1, 1, 1, 1, 1, 1]
-    },
+    type: String,
+    train_name: String,
+    schedule:String,
     distanceInKM: {
         type: Number,
     },
@@ -47,7 +41,7 @@ const trainSchema = new mongoose.Schema({
         mins: Number
     },
     stops: Number,
-    avgSpeed: Number,
+    avgSpeed: String,
     Route: [stationSchema],
     seatsAvailibility: {
         firstAc: seatSchema,
@@ -55,11 +49,16 @@ const trainSchema = new mongoose.Schema({
         thirdAc: seatSchema,
         sleeper: seatSchema,
         chaircar: seatSchema,
-        executivecar: seatSchema
-    }
+        executivecar: seatSchema,
+        accar:seatSchema
+    },
+    classes:String,
+    return:Number
 }, { timestamps: true })
 
 
 const Train = mongoose.model('Train', trainSchema);
+
+
 
 module.exports = Train;
