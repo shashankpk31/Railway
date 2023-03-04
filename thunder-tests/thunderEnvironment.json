@@ -13,7 +13,25 @@
       },
       {
         "name": "Token",
-        "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZjljNGQzMzdjNGNlMDFjMDNlZjJlMiIsImlhdCI6MTY3NzMxMzM1MiwiZXhwIjoxNjc5OTA1MzUyfQ.ZMLmZZlcXSRPZdAb4Gxw2sNJRwYzlasCXWknI6Yj3o0"
+        "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZjljNGQzMzdjNGNlMDFjMDNlZjJlMiIsImlhdCI6MTY3NzM3OTkyOCwiZXhwIjoxNjc5OTcxOTI4fQ.nKLHKdAVgqVkkZT0X76TYvs8HgzF7AenBTYd9LWup08"
+      }
+    ]
+  },
+  {
+    "_id": "9d7e2efb-0520-471e-a1cc-e1012549218d",
+    "name": "Deployed Railway Api",
+    "default": false,
+    "sortNum": 20000,
+    "created": "2023-02-25T17:35:41.594Z",
+    "modified": "2023-02-25T17:35:41.594Z",
+    "data": [
+      {
+        "name": "URL",
+        "value": "https://tame-blazer-cow.cyclic.app/"
+      },
+      {
+        "name": "Token",
+        "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZjljNGQzMzdjNGNlMDFjMDNlZjJlMiIsImlhdCI6MTY3NzM4MDUwMywiZXhwIjoxNjc5OTcyNTAzfQ.d47dpWNp0kgwO-_5nsFaXLvxoZnamJV_t9Arri35bnM"
       }
     ]
   }

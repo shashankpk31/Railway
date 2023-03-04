@@ -57,7 +57,7 @@ exports.SearchTrain = asyncHandler(async (req, res, next) => {
         "Route.code": { $all: [req.query.Dst, req.query.Src] }
     })
     const len = train.length;
-
+    
     train.forEach(element => {
         let dstInd = -1, srcInd = -1, rtLen = element.Route.length;
         element.Route.every(e => {

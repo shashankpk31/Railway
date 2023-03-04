@@ -248,16 +248,16 @@
     "colId": "db108b92-84cf-46e8-8d53-fc3f8710cdb3",
     "containerId": "53489e0a-f847-4f50-a081-fa959441e374",
     "name": "Search Train B/w Src & Dst",
-    "url": "{{URL}}train/search?Src=CSMT&Dst=SDAH",
+    "url": "{{URL}}train/search?Src=BUI&Dst=SDAH",
     "method": "POST",
     "sortNum": 170000,
     "created": "2023-02-25T11:06:01.493Z",
-    "modified": "2023-02-25T17:15:54.282Z",
+    "modified": "2023-02-25T17:16:35.862Z",
     "headers": [],
     "params": [
       {
         "name": "Src",
-        "value": "CSMT",
+        "value": "BUI",
         "isPath": false
       },
       {
@@ -266,6 +266,301 @@
         "isPath": false
       }
     ],
+    "tests": []
+  },
+  {
+    "_id": "4de14344-7e98-49d7-871c-a2bd89743d73",
+    "colId": "bbacf6a1-cd05-4e86-a23e-ec7fa4b593c0",
+    "containerId": "",
+    "name": "Welcome Request",
+    "url": "{{URL}}",
+    "method": "GET",
+    "sortNum": 10000,
+    "created": "2023-02-25T17:33:39.801Z",
+    "modified": "2023-02-25T17:36:22.278Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "411c3847-c3dc-453e-98a3-6ccb524f0f2e",
+    "colId": "bbacf6a1-cd05-4e86-a23e-ec7fa4b593c0",
+    "containerId": "3d317190-9443-46d5-aaee-48b4c63422cc",
+    "name": "Register User",
+    "url": "{{URL}}auth/register",
+    "method": "POST",
+    "sortNum": 10000,
+    "created": "2023-02-25T17:38:34.576Z",
+    "modified": "2023-02-25T17:38:34.576Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n\t\"username\": \"Shashankpk31\",\n\t\"Name\": \"Shashank Pathak\",\n\t\"Phone_no\": \"8090765432\",\n\t\"Email\": \"Shashankpk34@gmail.com\",\n\t\"Password\": \"Shashankpk31\",\n\t\"DOB\": \"21/08/2004\",\n\t\"Gender\": \"Male\",\n\t\"Marital_Status\": \"Single\",\n\t\"Occupation\": \"Student\",\n\t\"Aadhar_Card\": \"865478793432\",\n\t\"Nationality\": \"Indian\",\n\t\"Residential_Address\": \"19/1 Ghoses Lane Belurmath Howrah WestBengal\",\n\t\"role\": \"user\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "fe4caafb-e341-4a58-a138-781f3c635784",
+    "colId": "bbacf6a1-cd05-4e86-a23e-ec7fa4b593c0",
+    "containerId": "3d317190-9443-46d5-aaee-48b4c63422cc",
+    "name": "Confirm Email",
+    "url": "",
+    "method": "GET",
+    "sortNum": 20000,
+    "created": "2023-02-25T17:38:34.577Z",
+    "modified": "2023-02-25T17:38:34.576Z",
+    "headers": []
+  },
+  {
+    "_id": "99a188f4-c91e-4082-b2b0-ac805c7cc148",
+    "colId": "bbacf6a1-cd05-4e86-a23e-ec7fa4b593c0",
+    "containerId": "3d317190-9443-46d5-aaee-48b4c63422cc",
+    "name": "Login User",
+    "url": "{{URL}}auth/login",
+    "method": "POST",
+    "sortNum": 30000,
+    "created": "2023-02-25T17:38:34.578Z",
+    "modified": "2023-02-25T17:38:34.576Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n\t\"Email\":\"Shashankpk34@gmail.com\",\n\t\"Password\":\"Shashankpk31\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "84df2e13-6924-434c-a0e5-67a11687484b",
+    "colId": "bbacf6a1-cd05-4e86-a23e-ec7fa4b593c0",
+    "containerId": "3d317190-9443-46d5-aaee-48b4c63422cc",
+    "name": "Logout User",
+    "url": "{{URL}}auth/logout",
+    "method": "GET",
+    "sortNum": 40000,
+    "created": "2023-02-25T17:38:34.579Z",
+    "modified": "2023-02-25T17:38:34.576Z",
+    "headers": []
+  },
+  {
+    "_id": "194c37b9-93e7-4a8d-afaf-067c58572a4d",
+    "colId": "bbacf6a1-cd05-4e86-a23e-ec7fa4b593c0",
+    "containerId": "3d317190-9443-46d5-aaee-48b4c63422cc",
+    "name": "Get User Details",
+    "url": "{{URL}}auth/me",
+    "method": "GET",
+    "sortNum": 50000,
+    "created": "2023-02-25T17:38:34.580Z",
+    "modified": "2023-02-25T17:38:34.576Z",
+    "headers": []
+  },
+  {
+    "_id": "8ea13398-51b9-420d-a0aa-4019a0c4346b",
+    "colId": "bbacf6a1-cd05-4e86-a23e-ec7fa4b593c0",
+    "containerId": "3d317190-9443-46d5-aaee-48b4c63422cc",
+    "name": "Update Details",
+    "url": "{{URL}}auth/updatedetails",
+    "method": "PUT",
+    "sortNum": 60000,
+    "created": "2023-02-25T17:38:34.581Z",
+    "modified": "2023-02-25T17:38:34.576Z",
+    "headers": [],
+    "body": {
+      "type": "json",
+      "raw": "{\r\n\t\"Phone_no\": \"8090765432\",\r\n\t\"Nationality\": \"Indian\",\r\n\t\"Marital_Status\": \"Single\",\r\n\t\"Occupation\": \"Private Service\"\r\n}"
+    }
+  },
+  {
+    "_id": "a1cdb403-cc72-4007-bbb5-5bec4c4e0ca1",
+    "colId": "bbacf6a1-cd05-4e86-a23e-ec7fa4b593c0",
+    "containerId": "3d317190-9443-46d5-aaee-48b4c63422cc",
+    "name": "Update Password",
+    "url": "{{URL}}auth/updatepassword",
+    "method": "PUT",
+    "sortNum": 70000,
+    "created": "2023-02-25T17:38:34.582Z",
+    "modified": "2023-02-25T17:38:34.576Z",
+    "headers": [],
+    "body": {
+      "type": "json",
+      "raw": "{\r\n\t\"currentPassword\":\"Shashankpk31\",\r\n\t\"newPassword\":\"Shashankpk45\"\r\n}"
+    }
+  },
+  {
+    "_id": "3f90eebd-26be-42cc-bd75-2ddd6a6314d6",
+    "colId": "bbacf6a1-cd05-4e86-a23e-ec7fa4b593c0",
+    "containerId": "3d317190-9443-46d5-aaee-48b4c63422cc",
+    "name": "Forgot Password",
+    "url": "{{URL}}auth/forgotpassword",
+    "method": "POST",
+    "sortNum": 80000,
+    "created": "2023-02-25T17:38:34.583Z",
+    "modified": "2023-02-25T17:38:34.576Z",
+    "headers": [],
+    "body": {
+      "type": "json",
+      "raw": "{\r\n\t\"Email\":\"Shashankpk34@gmail.com\"\r\n}"
+    }
+  },
+  {
+    "_id": "33451810-089c-4956-ab57-42f0af02b398",
+    "colId": "bbacf6a1-cd05-4e86-a23e-ec7fa4b593c0",
+    "containerId": "3d317190-9443-46d5-aaee-48b4c63422cc",
+    "name": "Reset Password",
+    "url": "",
+    "method": "GET",
+    "sortNum": 90000,
+    "created": "2023-02-25T17:38:34.584Z",
+    "modified": "2023-02-25T17:38:34.576Z",
+    "headers": []
+  },
+  {
+    "_id": "fb5c130d-75c1-45e2-bd7e-98fcd7901761",
+    "colId": "bbacf6a1-cd05-4e86-a23e-ec7fa4b593c0",
+    "containerId": "7186e3c6-5e74-42fd-9f83-71a8a5163fd1",
+    "name": "Welcome Train Request",
+    "url": "{{URL}}train",
+    "method": "GET",
+    "sortNum": 100000,
+    "created": "2023-02-26T02:28:52.163Z",
+    "modified": "2023-02-26T03:11:12.300Z",
+    "headers": [],
+    "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{Token}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "0d78397c-48ee-4543-abfd-9bcc2994444a",
+    "colId": "bbacf6a1-cd05-4e86-a23e-ec7fa4b593c0",
+    "containerId": "7186e3c6-5e74-42fd-9f83-71a8a5163fd1",
+    "name": "Add Train",
+    "url": "{{URL}}train/addTrain",
+    "method": "POST",
+    "sortNum": 110000,
+    "created": "2023-02-26T02:28:52.165Z",
+    "modified": "2023-02-26T03:37:53.873Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n    \"runtime\": {\n      \"days\": 0,\n      \"hours\": 13,\n      \"mins\": 10\n    },\n    \"seatsAvailibility\": {\n      \"firstAc\": {\n        \"_id\": \"63fad10fc986e3002d9d5e87\",\n        \"charges_per_100km\": 295,\n        \"total_coach\": 2,\n        \"general_seats\": 6,\n        \"ladies_seats\": 4,\n        \"tatkal_seats\": 2,\n        \"senior_citizen\": 6\n      },\n      \"secondAc\": {\n        \"_id\": \"63fad10fc986e3002d9d5e88\",\n        \"charges_per_100km\": 172,\n        \"total_coach\": 2,\n        \"general_seats\": 48,\n        \"ladies_seats\": 4,\n        \"tatkal_seats\": 4,\n        \"senior_citizen\": 8\n      },\n      \"thirdAc\": {\n        \"_id\": \"63fad10fc986e3002d9d5e89\",\n        \"charges_per_100km\": 120,\n        \"total_coach\": 4,\n        \"general_seats\": 50,\n        \"ladies_seats\": 4,\n        \"tatkal_seats\": 9,\n        \"senior_citizen\": 9\n      },\n      \"sleeper\": {\n        \"_id\": \"63fad10fc986e3002d9d5e8a\",\n        \"charges_per_100km\": 46,\n        \"total_coach\": 9,\n        \"general_seats\": 50,\n        \"ladies_seats\": 4,\n        \"tatkal_seats\": 9,\n        \"senior_citizen\": 9\n      }\n    },\n    \"_id\": \"63f9c31ec3f0a7c0f1c438e9\",\n    \"trainno\": \"10103\",\n    \"type\": \"\",\n    \"train_name\": \"MANDOVI EXPRESS\",\n    \"distanceInKm\": 765,\n    \"Route\": [\n      {\n        \"no\": 1,\n        \"code\": \"CSMT\",\n        \"station\": \"Chhatrapati Shivaji Terminus MUMBAI CST\",\n        \"state\": \"\",\n        \"arrival\": \"00:00\",\n        \"departure\": \"07:10\",\n        \"halt\": 0,\n        \"day\": 1,\n        \"distance\": 0,\n        \"distanceFromSrc\": 0\n      },\n      {\n        \"no\": 2,\n        \"code\": \"DR\",\n        \"station\": \"DADAR\",\n        \"state\": \"\",\n        \"arrival\": \"07:22\",\n        \"departure\": \"07:25\",\n        \"halt\": 3,\n        \"day\": 1,\n        \"distance\": 9,\n        \"distanceFromSrc\": 9\n      },\n      {\n        \"no\": 3,\n        \"code\": \"TNA\",\n        \"station\": \"THANE\",\n        \"state\": \"\",\n        \"arrival\": \"07:47\",\n        \"departure\": \"07:50\",\n        \"halt\": 3,\n        \"day\": 1,\n        \"distance\": 25,\n        \"distanceFromSrc\": 34\n      },\n      {\n        \"no\": 4,\n        \"code\": \"DIVA\",\n        \"station\": \"DIVA\",\n        \"state\": \"\",\n        \"arrival\": \"08:00\",\n        \"departure\": \"08:01\",\n        \"halt\": 1,\n        \"day\": 1,\n        \"distance\": 18,\n        \"distanceFromSrc\": 43\n      },\n      {\n        \"no\": 5,\n        \"code\": \"PNVL\",\n        \"station\": \"PANVEL\",\n        \"state\": \"\",\n        \"arrival\": \"08:25\",\n        \"departure\": \"08:30\",\n        \"halt\": 5,\n        \"day\": 1,\n        \"distance\": 51,\n        \"distanceFromSrc\": 69\n      },\n      {\n        \"no\": 6,\n        \"code\": \"MNI\",\n        \"station\": \"MANGAON\",\n        \"state\": \"\",\n        \"arrival\": \"10:27\",\n        \"departure\": \"10:28\",\n        \"halt\": 1,\n        \"day\": 1,\n        \"distance\": 137,\n        \"distanceFromSrc\": 188\n      },\n      {\n        \"no\": 7,\n        \"code\": \"KHED\",\n        \"station\": \"KHED\",\n        \"state\": \"\",\n        \"arrival\": \"11:46\",\n        \"departure\": \"11:47\",\n        \"halt\": 1,\n        \"day\": 1,\n        \"distance\": 147,\n        \"distanceFromSrc\": 284\n      },\n      {\n        \"no\": 8,\n        \"code\": \"CHI\",\n        \"station\": \"CHIPLUN\",\n        \"state\": \"\",\n        \"arrival\": \"12:20\",\n        \"departure\": \"12:21\",\n        \"halt\": 1,\n        \"day\": 1,\n        \"distance\": 178,\n        \"distanceFromSrc\": 325\n      },\n      {\n        \"no\": 9,\n        \"code\": \"SGR\",\n        \"station\": \"SANGMESHWAR\",\n        \"state\": \"\",\n        \"arrival\": \"13:25\",\n        \"departure\": \"13:26\",\n        \"halt\": 1,\n        \"day\": 1,\n        \"distance\": 206,\n        \"distanceFromSrc\": 384\n      },\n      {\n        \"no\": 10,\n        \"code\": \"RN\",\n        \"station\": \"RATNAGIRI\",\n        \"state\": \"\",\n        \"arrival\": \"14:10\",\n        \"departure\": \"14:15\",\n        \"halt\": 5,\n        \"day\": 1,\n        \"distance\": 225,\n        \"distanceFromSrc\": 431\n      },\n      {\n        \"no\": 11,\n        \"code\": \"ADVI\",\n        \"station\": \"ADAVALI\",\n        \"state\": \"\",\n        \"arrival\": \"14:51\",\n        \"departure\": \"14:52\",\n        \"halt\": 1,\n        \"day\": 1,\n        \"distance\": 250,\n        \"distanceFromSrc\": 475\n      },\n      {\n        \"no\": 12,\n        \"code\": \"RAJP\",\n        \"station\": \"RAJAPUR ROAD\",\n        \"state\": \"\",\n        \"arrival\": \"15:41\",\n        \"departure\": \"15:42\",\n        \"halt\": 1,\n        \"day\": 1,\n        \"distance\": 270,\n        \"distanceFromSrc\": 520\n      },\n      {\n        \"no\": 13,\n        \"code\": \"VBW\",\n        \"station\": \"VAIBHAVWADI RD\",\n        \"state\": \"\",\n        \"arrival\": \"16:00\",\n        \"departure\": \"16:01\",\n        \"halt\": 1,\n        \"day\": 1,\n        \"distance\": 273,\n        \"distanceFromSrc\": 543\n      },\n      {\n        \"no\": 14,\n        \"code\": \"KKW\",\n        \"station\": \"KANKAVALI\",\n        \"state\": \"\",\n        \"arrival\": \"16:43\",\n        \"departure\": \"16:44\",\n        \"halt\": 1,\n        \"day\": 1,\n        \"distance\": 314,\n        \"distanceFromSrc\": 587\n      },\n      {\n        \"no\": 15,\n        \"code\": \"SNDD\",\n        \"station\": \"SINDHUDURG\",\n        \"state\": \"\",\n        \"arrival\": \"17:09\",\n        \"departure\": \"17:10\",\n        \"halt\": 1,\n        \"day\": 1,\n        \"distance\": 298,\n        \"distanceFromSrc\": 612\n      },\n      {\n        \"no\": 16,\n        \"code\": \"KUDL\",\n        \"station\": \"KUDAL\",\n        \"state\": \"\",\n        \"arrival\": \"17:23\",\n        \"departure\": \"17:24\",\n        \"halt\": 1,\n        \"day\": 1,\n        \"distance\": 328,\n        \"distanceFromSrc\": 626\n      },\n      {\n        \"no\": 17,\n        \"code\": \"SWV\",\n        \"station\": \"SAWANTWADI ROAD\",\n        \"state\": \"\",\n        \"arrival\": \"17:51\",\n        \"departure\": \"17:52\",\n        \"halt\": 1,\n        \"day\": 1,\n        \"distance\": 327,\n        \"distanceFromSrc\": 655\n      },\n      {\n        \"no\": 18,\n        \"code\": \"PERN\",\n        \"station\": \"PERNEM\",\n        \"state\": \"\",\n        \"arrival\": \"18:19\",\n        \"departure\": \"18:20\",\n        \"halt\": 1,\n        \"day\": 1,\n        \"distance\": 359,\n        \"distanceFromSrc\": 686\n      },\n      {\n        \"no\": 19,\n        \"code\": \"THVM\",\n        \"station\": \"THIVIM\",\n        \"state\": \"\",\n        \"arrival\": \"18:34\",\n        \"departure\": \"18:35\",\n        \"halt\": 1,\n        \"day\": 1,\n        \"distance\": 342,\n        \"distanceFromSrc\": 701\n      },\n      {\n        \"no\": 20,\n        \"code\": \"KRMI\",\n        \"station\": \"KARMALI\",\n        \"state\": \"\",\n        \"arrival\": \"19:01\",\n        \"departure\": \"19:02\",\n        \"halt\": 1,\n        \"day\": 1,\n        \"distance\": 383,\n        \"distanceFromSrc\": 725\n      },\n      {\n        \"no\": 21,\n        \"code\": \"VEN\",\n        \"station\": \"VERNA\",\n        \"state\": \"\",\n        \"arrival\": \"19:11\",\n        \"departure\": \"19:12\",\n        \"halt\": 1,\n        \"day\": 1,\n        \"distance\": 365,\n        \"distanceFromSrc\": 748\n      },\n      {\n        \"no\": 22,\n        \"code\": \"MAO\",\n        \"station\": \"MADGAON\",\n        \"state\": \"\",\n        \"arrival\": \"20:10\",\n        \"departure\": \"00:00\",\n        \"halt\": 0,\n        \"day\": 1,\n        \"distance\": 400,\n        \"distanceFromSrc\": 765\n      }\n    ],\n    \"stops\": 22,\n    \"avgSpeed\": \"48 km/hr\",\n    \"classes\": \"SL 3A 2A 1A\",\n    \"schedule\": \"S\\tM\\tT\\tW\\tT\\tF\\tS\",\n    \"return\": 10104\n  }",
+      "form": []
+    },
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{Token}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "c51cd2c9-b925-470c-806c-ff52e593534c",
+    "colId": "bbacf6a1-cd05-4e86-a23e-ec7fa4b593c0",
+    "containerId": "7186e3c6-5e74-42fd-9f83-71a8a5163fd1",
+    "name": "Get Train By Train No",
+    "url": "{{URL}}train/{train_id}",
+    "method": "GET",
+    "sortNum": 120000,
+    "created": "2023-02-26T02:28:52.166Z",
+    "modified": "2023-02-26T03:14:08.464Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "train_id",
+        "value": "10103",
+        "isPath": true
+      }
+    ],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{Token}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "5d26de06-8700-4aa3-bf7e-7b3f5fb038e6",
+    "colId": "bbacf6a1-cd05-4e86-a23e-ec7fa4b593c0",
+    "containerId": "7186e3c6-5e74-42fd-9f83-71a8a5163fd1",
+    "name": "Edit Train By Train No",
+    "url": "{{URL}}train/{train_id}",
+    "method": "PUT",
+    "sortNum": 130000,
+    "created": "2023-02-26T02:28:52.167Z",
+    "modified": "2023-02-26T03:40:17.656Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "train_id",
+        "value": "10103",
+        "isPath": true
+      }
+    ],
+    "body": {
+      "type": "json",
+      "raw": "{\n\t\"train_name\": \"MANDOVI EXPRESS\"\n}",
+      "form": []
+    },
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{Token}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "e16a0005-8a8b-4738-87c2-a9bdcac728bf",
+    "colId": "bbacf6a1-cd05-4e86-a23e-ec7fa4b593c0",
+    "containerId": "7186e3c6-5e74-42fd-9f83-71a8a5163fd1",
+    "name": "Delete Train",
+    "url": "{{URL}}train/{train_id}",
+    "method": "DELETE",
+    "sortNum": 140000,
+    "created": "2023-02-26T02:28:52.168Z",
+    "modified": "2023-02-26T03:36:54.026Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "train_id",
+        "value": "10103",
+        "isPath": true
+      }
+    ],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{Token}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "ed7cee4a-e9b9-4cf9-b56b-0ef96b08b9bc",
+    "colId": "bbacf6a1-cd05-4e86-a23e-ec7fa4b593c0",
+    "containerId": "7186e3c6-5e74-42fd-9f83-71a8a5163fd1",
+    "name": "Search Train B/w Src & Dst",
+    "url": "{{URL}}train/search?Src=BUI&Dst=ST",
+    "method": "POST",
+    "sortNum": 170000,
+    "created": "2023-02-26T02:28:52.169Z",
+    "modified": "2023-02-26T03:48:22.819Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "Src",
+        "value": "BUI",
+        "isPath": false
+      },
+      {
+        "name": "Dst",
+        "value": "ST",
+        "isPath": false
+      }
+    ],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{Token}}"
+    },
     "tests": []
   }
 ]

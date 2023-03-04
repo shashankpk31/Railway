@@ -1,4 +1,5 @@
 /node_modules
+/thunder-tests
 *.git
 **/.env
 /DFD's
